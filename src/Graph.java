@@ -35,8 +35,8 @@ public class Graph {
 
 
         Pathing smollPath = new Pathing();
-        smollPath.findPath(n1);
-        System.out.println(smollPath.SmallPath(n5));
+        smollPath.findPath(n1);                             // On met le noeud de départ
+        System.out.println(smollPath.SmallPath(n5));        // On met le noeud d'arrivée
 
     }
 }
