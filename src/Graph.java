@@ -1,3 +1,4 @@
+import java.awt.EventQueue;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -32,7 +33,21 @@ public class Graph {
         n5.addParent(new Edge(n5, n0, 8));
         n5.addParent(new Edge(n5, n2, 2));
         n5.addParent(new Edge(n5, n4, 3));
-
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Interface().setVisible(true);
+            }
+        });
+		/*EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Interface_V2 frame = new Interface_V2();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});*/
 
         Pathing smollPath = new Pathing();
         smollPath.findPath(n1);                             // On met le noeud de départ
