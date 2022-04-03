@@ -374,25 +374,7 @@ public class Interface extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    public static void AfficherTrajet(String Trajet) {
-    	System.out.println(Trajet);
-    	Trajet = Trajet.replace("[", "");
-    	Trajet = Trajet.replace("]", "");
-    	String[] separe = Trajet.split(",");
-    	
-    	for(int i = 0; i < separe.length-1; i++) {
-    		String actuel = separe[i];
-    		String suivant = separe[i +1];
-    		
-    		String compose = "jLabel_"+actuel+suivant;
-    		compose = compose.replace(" ", "");
-    		System.out.println(compose);
-    		
-    		
-    		
-    	}
-    	
-    }
+    
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
@@ -443,6 +425,26 @@ public class Interface extends javax.swing.JFrame {
                 new Interface().setVisible(true);
             }
         });
+    }
+    
+    public static void AfficherTrajet(String Trajet) {
+    	System.out.println(Trajet);
+    	Trajet = Trajet.replace("[", "");
+    	Trajet = Trajet.replace("]", "");
+    	String[] separe = Trajet.split(",");
+    	
+    	for(int i = 0; i < separe.length-1; i++) {
+    		String actuel = separe[i];
+    		String suivant = separe[i +1];
+    		
+    		String compose = "jLabel_"+actuel+suivant;
+    		compose = compose.replace(" ", "");
+    		System.out.println(compose);
+    		
+    		
+    		
+    	}
+    	
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

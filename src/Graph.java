@@ -92,9 +92,7 @@ public class Graph {
         Pathing smollPath = new Pathing();
         smollPath.findPath(nA);                             // On met le noeud de départ
         System.out.println(smollPath.SmallPath(nN));        // On met le noeud d'arrivée
-        //smollPath.SmallPath(nN).toString();
         Interface.AfficherTrajet(smollPath.SmallPath(nN).toString());
-        
         
 
     }
