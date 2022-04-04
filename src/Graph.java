@@ -34,6 +34,14 @@ public class Graph {
    	return resultat;
     }
     
+    public static double CalculerTemps(double km, double vitesse) {
+    	
+    	double temps; 
+    	
+    	
+    	return 2.0;
+    }
+    
 	
 	
     public static void main(String[] args) {
@@ -118,16 +126,18 @@ public class Graph {
         
         
         Pathing smollPath = new Pathing();
-        smollPath.findPath(nC);                             // On met le noeud de départ
+        smollPath.findPath(nD);                             // On met le noeud de départ
         //System.out.println(smollPath.SmallPath(nL));        // On met le noeud d'arrivée
         //System.out.println(Interface.AfficherTrajet(smollPath.SmallPath(nN).toString()));
        
        Interface int1 = new Interface();
        int1.setVisible(true);
        
+       
        //int1.trajetFinal = Interface.AfficherTrajet(smollPath.SmallPath(nN).toString());
        
-      String resultat = CalculerTrajet(smollPath.SmallPath(nL).toString());
+      String resultat = CalculerTrajet(smollPath.SmallPath(nO).toString());
+      int1.setjTextField1(nL.getDist());
       String[] allSegments = resultat.split(",");
       
       int1.setjLabel_AB(false);
