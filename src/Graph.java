@@ -9,6 +9,208 @@ public class Graph {
 
     // https://gyazo.com/539ad025df8a0a2dad5f697b122df346
 	
+	public static void AfficherTrajet(Interface n1, String[] allSegments) {
+		
+		 n1.setjLabel_AB(false);
+	      n1.setjLabel_AG(false);
+	      n1.setjLabel_BC(false);
+	      n1.setjLabel_BF(false);
+	      n1.setjLabel_CD(false);
+	      n1.setjLabel_CE(false);
+	      n1.setjLabel_DJ(false);
+	      n1.setjLabel_EH(false);
+	      n1.setjLabel_EF(false);
+	      n1.setjLabel_FG(false);
+	      n1.setjLabel_GI(false);
+	      n1.setjLabel_HI(false);
+	      n1.setjLabel_HJ(false);
+	      n1.setjLabel_HL(false);
+	      n1.setjLabel_IM(false);
+	      n1.setjLabel_JK(false);
+	      n1.setjLabel_KN(false);
+	      n1.setjLabel_LK(false);
+	      n1.setjLabel_ML(false);
+	      n1.setjLabel_MO(false);
+	      n1.setjLabel_ON(false);
+	      
+	      
+	       //System.out.println(allSegments[0]);        
+	        for(String segment : allSegments) {
+		        switch(segment) {
+		        	
+		        case "AB":
+		        	n1.setjLabel_AB(true);
+	        	break;
+
+		        case "BA":
+		        	n1.setjLabel_AB(true);
+	        	break;        	
+		        
+		        case "AG":
+		        	n1.setjLabel_AG(true);
+	        	break;
+	        	
+		        case "GA":
+		        	n1.setjLabel_AG(true);
+	        	break;
+	        	
+		        case "BF":
+		        	n1.setjLabel_BF(true);
+	        	break;
+	        	
+		        case "FB":
+		        	n1.setjLabel_BF(true);
+	        	break;
+	        	
+		        case "BC":
+		        	n1.setjLabel_BC(true);
+	        	break;
+	        	
+		        case "CB":
+		        	n1.setjLabel_BC(true);
+	        	break; 
+	        	
+		        case "CE":
+		        	n1.setjLabel_CE(true);
+	        	break;
+	        	
+		        case "EC":
+		        	n1.setjLabel_CE(true);
+	        	break;
+	        	
+		        case "CD":
+		        	n1.setjLabel_CD(true);
+	        	break;
+	        	
+		        case "DC":
+		        	n1.setjLabel_CD(true);
+	        	break;
+	        	
+		        case "DJ":
+		        	n1.setjLabel_DJ(true);
+	        	break;
+	        	
+		        case "JD":
+		        	n1.setjLabel_DJ(true);
+	        	break;
+	        	
+		        case "JK":
+		        	n1.setjLabel_JK(true);
+	        	break;
+	        	
+		        case "KJ":
+		        	n1.setjLabel_JK(true);
+	        	break;
+	        	
+		        case "JH":
+		        	n1.setjLabel_HJ(true);
+	        	break;
+	        	
+		        case "HJ":
+		        	n1.setjLabel_HJ(true);
+	        	break;
+	        	
+		        case "HE":
+		        	n1.setjLabel_EH(true);
+	        	break;
+	        	
+		        case "EH":
+		        	n1.setjLabel_EH(true);
+	        	break;
+
+		        case "EF":
+		        	n1.setjLabel_EF(true);
+	        	break;
+	        	
+		        case "FE":
+		        	n1.setjLabel_EF(true);
+	        	break;
+	        	
+		        case "FG":
+		        	n1.setjLabel_FG(true);
+	        	break;
+	        	
+		        case "GF":
+		        	n1.setjLabel_FG(true);
+	        	break;
+	        	
+		        case "GI":
+		        	n1.setjLabel_GI(true);
+	        	break;
+	        	
+		        case "IG":
+		        	n1.setjLabel_GI(true);
+	        	break;
+	        	
+		        case "IM":
+		        	n1.setjLabel_IM(true);
+	        	break;
+	        	
+		        case "MI":
+		        	n1.setjLabel_IM(true);
+	        	break;
+	        	
+		        case "IH":
+		        	n1.setjLabel_HI(true);
+	        	break;
+	        	
+		        case "HI":
+		        	n1.setjLabel_HI(true);
+	        	break;        	
+	        	        	
+		        case "HL":
+		        	n1.setjLabel_HL(true);
+	        	break;
+	        	
+		        case "LH":
+		        	n1.setjLabel_HL(true);
+	        	break;        	
+	        	
+		        case "LK":
+		        	n1.setjLabel_LK(true);
+	        	break;
+	        	
+		        case "KL":
+		        	n1.setjLabel_LK(true);
+	        	break;        	
+	        	        	
+		        case "LM":
+		        	n1.setjLabel_ML(true);
+	        	break;
+	        	
+		        case "ML":
+		        	n1.setjLabel_ML(true);
+	        	break;        	
+	        	        	        	        	
+		        case "MO":
+		        	n1.setjLabel_MO(true);
+	        	break;
+	        	
+		        case "OM":
+		        	n1.setjLabel_MO(true);
+	        	break;        	
+	        	        	        	
+		        case "ON":
+		        	n1.setjLabel_ON(true);
+	        	break;
+	        	
+		        case "NO":
+		        	n1.setjLabel_ON(true);
+	        	break;        	
+	        	        	        	
+		        case "NK":
+		        	n1.setjLabel_KN(true);
+	        	break;
+	        	
+		        case "KN":
+		        	n1.setjLabel_KN(true);
+	        	break;        	
+	        	        	        	
+		        }
+	        }
+		
+	}
+	
 	
     public static String CalculerTrajet(String Trajet) {
    	//String sujet = "Traduire le resultat de la fonction en segment";
@@ -42,10 +244,15 @@ public class Graph {
     	return 2.0;
     }
     
-	
-	
-    public static void main(String[] args) {
-    	
+	public static void CreerTrajet(Interface n1) {
+		
+		String trajet = "";
+		
+		double distance = 0.0;
+		
+		String combo1 = n1.getCombo1Value(); //Valeur des entr�es par l'utilisateur
+		String combo2 = n1.getCombo2Value();
+		
         Node nA = new Node("A");            // Noeuds qui vont composer le graphique
         Node nB = new Node("B");
         Node nC = new Node("C");
@@ -106,27 +313,117 @@ public class Graph {
         nO.addParent(new Edge(nO, nM, 5));
         nO.addParent(new Edge(nO, nN, 20));
         
-        
-        /*java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Interface().setVisible(true);
-            }
-        });*/
-		/*EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Interface_V2 frame = new Interface_V2();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});*/
-        
-        
-        
         Pathing smollPath = new Pathing();
-        smollPath.findPath(nD);                             // On met le noeud de départ
+		
+		switch(combo1) {
+			
+			case "nA" : 
+				smollPath.findPath(nA); 
+			case "nB":
+				smollPath.findPath(nB); 
+			case "nC":
+				smollPath.findPath(nC); 
+			case "nD":
+				smollPath.findPath(nD); 
+			case "nE":
+				smollPath.findPath(nE); 
+			case "nF":
+				smollPath.findPath(nF); 
+			case "nG":
+				smollPath.findPath(nG); 
+			case "nH":
+				smollPath.findPath(nH); 
+			case "nI":
+				smollPath.findPath(nI); 
+			case "nJ":
+				smollPath.findPath(nJ); 
+			case "nK":
+				smollPath.findPath(nK); 
+			case "nL":
+				smollPath.findPath(nL); 
+			case "nM":
+				smollPath.findPath(nM); 
+			case "nN":
+				smollPath.findPath(nN); 
+			case "nO":	
+				smollPath.findPath(nO); 
+		}
+		switch(combo2) {
+		
+		case "nA" : 
+			 trajet = smollPath.SmallPath(nA).toString();
+			 distance = nA.getDist();
+		break;
+		case "nB":
+			 trajet = smollPath.SmallPath(nB).toString();
+			 distance = nB.getDist();
+		break;	 
+		case "nC":
+			 trajet = smollPath.SmallPath(nC).toString();
+			 distance = nC.getDist();
+		break;
+		case "nD":
+			 trajet = smollPath.SmallPath(nD).toString();
+			 distance = nD.getDist();
+		break;
+		case "nE":
+			 trajet = smollPath.SmallPath(nE).toString();
+			 distance = nE.getDist();
+		break;
+		case "nF":
+			 trajet = smollPath.SmallPath(nF).toString();
+			 distance = nF.getDist();
+		break;
+		case "nG":
+			 trajet = smollPath.SmallPath(nG).toString();
+			 distance = nG.getDist();
+		break;	 
+		case "nH":
+			 trajet = smollPath.SmallPath(nH).toString();
+			 distance = nH.getDist();
+		break;
+		case "nI":
+			 trajet = smollPath.SmallPath(nI).toString();
+			 distance = nI.getDist();
+		break;			 
+		case "nJ":
+			 trajet = smollPath.SmallPath(nJ).toString();
+			 distance = nJ.getDist();
+		break;			 
+		case "nK":
+			 trajet = smollPath.SmallPath(nK).toString();
+			 distance = nK.getDist();
+			 
+		break;
+		case "nL":
+			 trajet = smollPath.SmallPath(nL).toString();
+			 distance = nL.getDist();
+		break;			 
+		case "nM":
+			 trajet = smollPath.SmallPath(nM).toString();
+			 distance = nM.getDist();
+		break;			 
+		case "nN":
+			 trajet = smollPath.SmallPath(nN).toString();
+			 distance = nN.getDist();
+		break;
+		case "nO":	
+			 trajet = smollPath.SmallPath(nO).toString();
+			 distance = nO.getDist();
+		break;
+	}
+		
+	      String resultat = CalculerTrajet(trajet);
+	      
+	      String[] allSegments = resultat.split(",");
+	      
+	      AfficherTrajet(n1, allSegments);
+	      n1.setjTextField1(distance);
+		
+}
+	
+    public static void main(String[] args) {
+    	                            // On met le noeud de départ
         //System.out.println(smollPath.SmallPath(nL));        // On met le noeud d'arrivée
         //System.out.println(Interface.AfficherTrajet(smollPath.SmallPath(nN).toString()));
        
@@ -136,205 +433,9 @@ public class Graph {
        
        //int1.trajetFinal = Interface.AfficherTrajet(smollPath.SmallPath(nN).toString());
        
-      String resultat = CalculerTrajet(smollPath.SmallPath(nO).toString());
-      int1.setjTextField1(nL.getDist());
-      String[] allSegments = resultat.split(",");
-      
-      int1.setjLabel_AB(false);
-      int1.setjLabel_AG(false);
-      int1.setjLabel_BC(false);
-      int1.setjLabel_BF(false);
-      int1.setjLabel_CD(false);
-      int1.setjLabel_CE(false);
-      int1.setjLabel_DJ(false);
-      int1.setjLabel_EH(false);
-      int1.setjLabel_GI(false);
-      int1.setjLabel_HI(false);
-      int1.setjLabel_HJ(false);
-      int1.setjLabel_HL(false);
-      int1.setjLabel_IM(false);
-      int1.setjLabel_JK(false);
-      int1.setjLabel_KN(false);
-      int1.setjLabel_LK(false);
-      int1.setjLabel_ML(false);
-      int1.setjLabel_MO(false);
-      int1.setjLabel_ON(false);
+
       
       
-       //System.out.println(allSegments[0]);        
-        for(String segment : allSegments) {
-	        switch(segment) {
-	        	
-	        case "AB":
-	        	int1.setjLabel_AB(true);
-        	break;
-
-	        case "BA":
-	        	int1.setjLabel_AB(true);
-        	break;        	
-	        
-	        case "AG":
-	        	int1.setjLabel_AG(true);
-        	break;
-        	
-	        case "GA":
-	        	int1.setjLabel_AG(true);
-        	break;
-        	
-	        case "BF":
-	        	int1.setjLabel_BC(true);
-        	break;
-        	
-	        case "FB":
-	        	int1.setjLabel_BC(true);
-        	break;
-        	
-	        case "BC":
-	        	int1.setjLabel_BC(true);
-        	break;
-        	
-	        case "CB":
-	        	int1.setjLabel_BC(true);
-        	break; 
-        	
-	        case "CE":
-	        	int1.setjLabel_CE(true);
-        	break;
-        	
-	        case "EC":
-	        	int1.setjLabel_CE(true);
-        	break;
-        	
-	        case "CD":
-	        	int1.setjLabel_CD(true);
-        	break;
-        	
-	        case "DC":
-	        	int1.setjLabel_CD(true);
-        	break;
-        	
-	        case "DJ":
-	        	int1.setjLabel_DJ(true);
-        	break;
-        	
-	        case "JD":
-	        	int1.setjLabel_DJ(true);
-        	break;
-        	
-	        case "JK":
-	        	int1.setjLabel_JK(true);
-        	break;
-        	
-	        case "KJ":
-	        	int1.setjLabel_JK(true);
-        	break;
-        	
-	        case "JH":
-	        	int1.setjLabel_HJ(true);
-        	break;
-        	
-	        case "HJ":
-	        	int1.setjLabel_HJ(true);
-        	break;
-        	
-	        case "HE":
-	        	int1.setjLabel_EH(true);
-        	break;
-        	
-	        case "EH":
-	        	int1.setjLabel_EH(true);
-        	break;
-
-	        case "EF":
-	        	int1.setjLabel_EF(true);
-        	break;
-        	
-	        case "FE":
-	        	int1.setjLabel_EF(true);
-        	break;
-        	
-	        case "FG":
-	        	int1.setjLabel_FG(true);
-        	break;
-        	
-	        case "GF":
-	        	int1.setjLabel_FG(true);
-        	break;
-        	
-	        case "GI":
-	        	int1.setjLabel_GI(true);
-        	break;
-        	
-	        case "IG":
-	        	int1.setjLabel_GI(true);
-        	break;
-        	
-	        case "IM":
-	        	int1.setjLabel_IM(true);
-        	break;
-        	
-	        case "MI":
-	        	int1.setjLabel_IM(true);
-        	break;
-        	
-	        case "IH":
-	        	int1.setjLabel_HI(true);
-        	break;
-        	
-	        case "HI":
-	        	int1.setjLabel_HI(true);
-        	break;        	
-        	        	
-	        case "HL":
-	        	int1.setjLabel_HL(true);
-        	break;
-        	
-	        case "LH":
-	        	int1.setjLabel_HL(true);
-        	break;        	
-        	
-	        case "LK":
-	        	int1.setjLabel_LK(true);
-        	break;
-        	
-	        case "KL":
-	        	int1.setjLabel_LK(true);
-        	break;        	
-        	        	
-	        case "LM":
-	        	int1.setjLabel_ML(true);
-        	break;
-        	
-	        case "ML":
-	        	int1.setjLabel_ML(true);
-        	break;        	
-        	        	        	        	
-	        case "MO":
-	        	int1.setjLabel_MO(true);
-        	break;
-        	
-	        case "OM":
-	        	int1.setjLabel_MO(true);
-        	break;        	
-        	        	        	
-	        case "ON":
-	        	int1.setjLabel_ON(true);
-        	break;
-        	
-	        case "NO":
-	        	int1.setjLabel_ON(true);
-        	break;        	
-        	        	        	
-	        case "NK":
-	        	int1.setjLabel_KN(true);
-        	break;
-        	
-	        case "KN":
-	        	int1.setjLabel_KN(true);
-        	break;        	
-        	        	        	
-	        }
-        }
-
+      
     }
 }

@@ -394,9 +394,6 @@ public class Interface extends javax.swing.JFrame {
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
-    		jComboBox1.getSelectedItem();
-    		String entre = "n" + jComboBox1.getSelectedItem().toString();
-    		System.out.println(entre);
     
     		
     }//GEN-LAST:event_jComboBox1ActionPerformed
@@ -407,6 +404,7 @@ public class Interface extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+    		Graph.CreerTrajet(this);
     }//GEN-LAST:event_jButton1ActionPerformed
     
     
@@ -540,7 +538,15 @@ public class Interface extends javax.swing.JFrame {
 	public void setjLabel_ON(boolean Visible) {
 		this.jLabel_ON.setVisible(Visible);
 	}
-
+	
+	public String getCombo1Value() {
+		String valeur = "n" + jComboBox1.getSelectedItem().toString(); 
+		return valeur;
+	}
+	public String getCombo2Value() {
+		String valeur = "n" + jComboBox2.getSelectedItem().toString(); 
+		return valeur;
+	}
 
 
 	// Variables declaration - do not modify//GEN-BEGIN:variables
