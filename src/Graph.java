@@ -319,34 +319,49 @@ public class Graph {
 			
 			case "nA" : 
 				smollPath.findPath(nA); 
+				break;
 			case "nB":
-				smollPath.findPath(nB); 
+				smollPath.findPath(nB);
+				break;
 			case "nC":
-				smollPath.findPath(nC); 
+				smollPath.findPath(nC);
+				break;
 			case "nD":
-				smollPath.findPath(nD); 
+				smollPath.findPath(nD);
+				break;
 			case "nE":
-				smollPath.findPath(nE); 
+				smollPath.findPath(nE);
+				break;
 			case "nF":
-				smollPath.findPath(nF); 
+				smollPath.findPath(nF);
+				break;
 			case "nG":
-				smollPath.findPath(nG); 
+				smollPath.findPath(nG);
+				break;
 			case "nH":
-				smollPath.findPath(nH); 
+				smollPath.findPath(nH);
+				break;
 			case "nI":
-				smollPath.findPath(nI); 
+				smollPath.findPath(nI);
+				break;
 			case "nJ":
-				smollPath.findPath(nJ); 
+				smollPath.findPath(nJ);
+				break;
 			case "nK":
-				smollPath.findPath(nK); 
+				smollPath.findPath(nK);
+				break;
 			case "nL":
-				smollPath.findPath(nL); 
+				smollPath.findPath(nL);
+				break;
 			case "nM":
-				smollPath.findPath(nM); 
+				smollPath.findPath(nM);
+				break;
 			case "nN":
-				smollPath.findPath(nN); 
+				smollPath.findPath(nN);
+				break;
 			case "nO":	
-				smollPath.findPath(nO); 
+				smollPath.findPath(nO);
+				break;
 		}
 		switch(combo2) {
 		
@@ -423,19 +438,11 @@ public class Graph {
 }
 	
     public static void main(String[] args) {
-    	                            // On met le noeud de départ
-        //System.out.println(smollPath.SmallPath(nL));        // On met le noeud d'arrivée
-        //System.out.println(Interface.AfficherTrajet(smollPath.SmallPath(nN).toString()));
+
        
        Interface int1 = new Interface();
        int1.setVisible(true);
        
-       
-       //int1.trajetFinal = Interface.AfficherTrajet(smollPath.SmallPath(nN).toString());
-       
 
-      
-      
-      
     }
 }
