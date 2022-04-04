@@ -1,5 +1,3 @@
-import java.awt.Color;
-
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -26,7 +24,7 @@ public class Interface extends javax.swing.JFrame {
     //@SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-
+    	trajetFinal = "";
         jPanel1 = new javax.swing.JPanel();
         label1 = new java.awt.Label();
         jComboBox1 = new javax.swing.JComboBox<>();
@@ -35,6 +33,8 @@ public class Interface extends javax.swing.JFrame {
         label3 = new java.awt.Label();
         jTextField1 = new javax.swing.JTextField();
         jTextField2 = new javax.swing.JTextField();
+        jLabel_FG = new javax.swing.JLabel();
+        jLabel_EF = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         label4 = new java.awt.Label();
@@ -49,10 +49,10 @@ public class Interface extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        jLabel_EG = new javax.swing.JLabel();
         jLabel_ON = new javax.swing.JLabel();
         jLabel_ML = new javax.swing.JLabel();
-        jLabel_AC = new javax.swing.JLabel();
+        jLabel_AB = new javax.swing.JLabel();
+        jLabel_BC = new javax.swing.JLabel();
         jLabel_AG = new javax.swing.JLabel();
         jLabel_LK = new javax.swing.JLabel();
         jLabel_CD = new javax.swing.JLabel();
@@ -151,6 +151,16 @@ public class Interface extends javax.swing.JFrame {
         label4.setText("Distance :");
         jPanel1.add(label4);
         label4.setBounds(512, 25, 118, 28);
+        
+        jLabel_FG.setBackground(new java.awt.Color(0, 51, 204));
+        jLabel_FG.setOpaque(true);
+        jPanel1.add(jLabel_FG);
+        jLabel_FG.setBounds(560, 660, 20, 200);
+
+        jLabel_EF.setBackground(new java.awt.Color(0, 51, 204));
+        jLabel_EF.setOpaque(true);
+        jPanel1.add(jLabel_EF);
+        jLabel_EF.setBounds(560, 420, 20, 260);
 
         jTextField3.setEditable(false);
         jTextField3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -203,7 +213,6 @@ public class Interface extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-proche-de-moi-30.png"))); // NOI18N
         jButton1.setText("Démarrer");
-        jButton1.setForeground(new java.awt.Color(255,255,255));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -228,90 +237,93 @@ public class Interface extends javax.swing.JFrame {
         jPanel1.add(jPanel2);
         jPanel2.setBounds(2, 903, 1276, 781);
 
-        jLabel_EG.setBackground(new java.awt.Color(255, 0, 51));
-        jLabel_EG.setOpaque(true);
-        jPanel1.add(jLabel_EG);
-        jLabel_EG.setBounds(560, 420, 20, 440);
 
-        jLabel_ON.setBackground(new java.awt.Color(255, 0, 51));
+        jLabel_ON.setBackground(new java.awt.Color(0, 51, 204));
         jLabel_ON.setOpaque(true);
         jPanel1.add(jLabel_ON);
         jLabel_ON.setBounds(1210, 200, 20, 670);
 
-        jLabel_ML.setBackground(new java.awt.Color(255, 0, 51));
+        jLabel_ML.setBackground(new java.awt.Color(0, 51, 204));
         jLabel_ML.setOpaque(true);
         jPanel1.add(jLabel_ML);
         jLabel_ML.setBounds(1040, 430, 20, 440);
 
-        jLabel_AC.setBackground(new java.awt.Color(255, 0, 51));
-        jLabel_AC.setOpaque(true);
-        jPanel1.add(jLabel_AC);
-        jLabel_AC.setBounds(80, 420, 20, 440);
+        jLabel_AB.setBackground(new java.awt.Color(0, 51, 204));
+        jLabel_AB.setOpaque(true);
+        jPanel1.add(jLabel_AB);
+        jLabel_AB.setBounds(80, 660, 20, 210);
 
-        jLabel_AG.setBackground(new java.awt.Color(255, 0, 51));
+        jLabel_BC.setBackground(new java.awt.Color(0, 51, 204));
+        jLabel_BC.setOpaque(true);
+        jPanel1.add(jLabel_BC);
+        jLabel_BC.setBounds(80, 420, 20, 260);
+
+        jLabel_AG.setBackground(new java.awt.Color(0, 51, 204));
         jLabel_AG.setOpaque(true);
         jPanel1.add(jLabel_AG);
         jLabel_AG.setBounds(80, 850, 500, 20);
 
-        jLabel_LK.setBackground(new java.awt.Color(255, 0, 51));
+        jLabel_LK.setBackground(new java.awt.Color(0, 51, 204));
         jLabel_LK.setOpaque(true);
         jPanel1.add(jLabel_LK);
         jLabel_LK.setBounds(1040, 210, 20, 220);
 
-        jLabel_CD.setBackground(new java.awt.Color(255, 0, 51));
+        jLabel_CD.setBackground(new java.awt.Color(0, 51, 204));
         jLabel_CD.setOpaque(true);
         jPanel1.add(jLabel_CD);
         jLabel_CD.setBounds(80, 200, 20, 220);
 
-        jLabel_DJ.setBackground(new java.awt.Color(255, 0, 51));
+        jLabel_DJ.setBackground(new java.awt.Color(0, 51, 204));
+        
+        // Red = (new java.awt.Color(255, 0, 51));
         jLabel_DJ.setOpaque(true);
         jPanel1.add(jLabel_DJ);
         jLabel_DJ.setBounds(80, 200, 730, 20);
 
-        jLabel_BF.setBackground(new java.awt.Color(255, 0, 51));
+        jLabel_BF.setBackground(new java.awt.Color(0, 51, 204));
         jLabel_BF.setOpaque(true);
         jPanel1.add(jLabel_BF);
         jLabel_BF.setBounds(100, 660, 470, 20);
 
-        jLabel_IM.setBackground(new java.awt.Color(255, 0, 51));
+        jLabel_IM.setBackground(new java.awt.Color(0, 51, 204));
         jLabel_IM.setOpaque(true);
         jPanel1.add(jLabel_IM);
         jLabel_IM.setBounds(810, 850, 250, 20);
 
-        jLabel_JK.setBackground(new java.awt.Color(255, 0, 51));
+        jLabel_JK.setBackground(new java.awt.Color(0, 51, 204));
         jLabel_JK.setOpaque(true);
         jPanel1.add(jLabel_JK);
         jLabel_JK.setBounds(810, 200, 250, 20);
 
-        jLabel_GI.setBackground(new java.awt.Color(255, 0, 51));
+        jLabel_GI.setBackground(new java.awt.Color(0, 51, 204));
         jLabel_GI.setOpaque(true);
         jPanel1.add(jLabel_GI);
         jLabel_GI.setBounds(570, 850, 250, 20);
 
-        jLabel_MO.setBackground(new java.awt.Color(255, 0, 51));
+        jLabel_MO.setBackground(new java.awt.Color(0, 51, 204));
         jLabel_MO.setOpaque(true);
         jPanel1.add(jLabel_MO);
         jLabel_MO.setBounds(1050, 850, 180, 20);
 
-        jLabel_KN.setBackground(new java.awt.Color(255, 0, 51));
+        jLabel_KN.setBackground(new java.awt.Color(0, 51, 204));
         jLabel_KN.setOpaque(true);
         jPanel1.add(jLabel_KN);
         jLabel_KN.setBounds(1050, 200, 180, 20);
 
-        jLabel_HL.setBackground(new java.awt.Color(255, 0, 51));
+        jLabel_HL.setBackground(new java.awt.Color(0, 51, 204));
         jLabel_HL.setOpaque(true);
         jPanel1.add(jLabel_HL);
         jLabel_HL.setBounds(810, 420, 250, 20);
 
-        jLabel_EH.setBackground(new java.awt.Color(255, 0, 51));
+        jLabel_EH.setBackground(new java.awt.Color(0, 51, 204));
         jLabel_EH.setOpaque(true);
         jPanel1.add(jLabel_EH);
         jLabel_EH.setBounds(570, 420, 250, 20);
 
-        jLabel_CE.setBackground(new java.awt.Color(255, 0, 51));
+        jLabel_CE.setBackground(new java.awt.Color(0, 51, 204));
         jLabel_CE.setOpaque(true);
         jPanel1.add(jLabel_CE);
-        jLabel_CE.setBounds(90, 420, 470, 20);
+        jLabel_CE.setBounds(90, 420, 480, 20);
 
         jLabel_HI.setBackground(new java.awt.Color(255, 0, 0));
         jLabel_HI.setOpaque(true);
@@ -333,18 +345,15 @@ public class Interface extends javax.swing.JFrame {
         jPanel1.add(jLabel1);
         jLabel1.setBounds(60, 180, 1170, 729);
         
-        
-        /*
-         *Afficher le trajet ou le trafics sur les routes
-        */
-        
-        jLabel_AC.setVisible(false);
+        jLabel_AB.setVisible(false);
+        jLabel_EF.setVisible(false);
+        jLabel_FG.setVisible(false);
         jLabel_AG.setVisible(false);
+        jLabel_BC.setVisible(false);
         jLabel_BF.setVisible(false);
         jLabel_CD.setVisible(false);
         jLabel_CE.setVisible(false);
         jLabel_DJ.setVisible(false);
-        jLabel_EG.setVisible(false);
         jLabel_EH.setVisible(false);
         jLabel_GI.setVisible(false);
         jLabel_HI.setVisible(false);
@@ -356,14 +365,14 @@ public class Interface extends javax.swing.JFrame {
         jLabel_LK.setVisible(false);
         jLabel_ML.setVisible(false);
         jLabel_MO.setVisible(false);
-        jLabel_ON.setVisible(true);
-        jLabel_ON.setBackground(new java.awt.Color(0,51,204));
-
+        jLabel_ON.setVisible(false);
+        
+        
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1280, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -374,9 +383,8 @@ public class Interface extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+	private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
@@ -391,16 +399,17 @@ public class Interface extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
-
+    
+    
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    /*public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
+         
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -419,35 +428,113 @@ public class Interface extends javax.swing.JFrame {
         }
         //</editor-fold>
 
-        /* Create and display the form */
+        Create and display the form 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Interface().setVisible(true);
             }
         });
-    }
+    }*/
     
-    public static void AfficherTrajet(String Trajet) {
-    	System.out.println(Trajet);
-    	Trajet = Trajet.replace("[", "");
-    	Trajet = Trajet.replace("]", "");
-    	String[] separe = Trajet.split(",");
-    	
-    	for(int i = 0; i < separe.length-1; i++) {
-    		String actuel = separe[i];
-    		String suivant = separe[i +1];
-    		
-    		String compose = "jLabel_"+actuel+suivant;
-    		compose = compose.replace(" ", "");
-    		System.out.println(compose);
-    		
-    		
-    		
-    	}
-    	
-    }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    
+    
+     
+
+
+    public void setjComboBox2(javax.swing.JComboBox<String> jComboBox2) {
+		this.jComboBox2 = jComboBox2;
+	}
+
+
+
+	public void setjLabel_AB(boolean Visible) {
+		this.jLabel_AB.setVisible(Visible);
+	}
+
+	public void setjLabel_AG(boolean Visible) {
+		this.jLabel_AG.setVisible(Visible);
+	}
+
+	public void setjLabel_BC(boolean Visible) {
+		this.jLabel_BC.setVisible(Visible);
+	}
+
+	public void setjLabel_BF(boolean Visible) {
+		this.jLabel_BF.setVisible(Visible);
+	}
+	
+	public void setjLabel_EF(boolean Visible) {
+		this.jLabel_EF.setVisible(Visible);
+	}
+	
+	public void setjLabel_FG(boolean Visible) {
+		this.jLabel_FG.setVisible(Visible);
+	}	
+
+	public void setjLabel_CD(boolean Visible) {
+		this.jLabel_CD.setVisible(Visible);
+	}
+
+	public void setjLabel_CE(boolean Visible) {
+		this.jLabel_CE.setVisible(Visible);
+	}
+
+	public void setjLabel_DJ(boolean Visible) {
+		this.jLabel_DJ.setVisible(Visible);
+	}
+
+	public void setjLabel_EH(boolean Visible) {
+		this.jLabel_EH.setVisible(Visible);
+	}
+
+	public void setjLabel_GI(boolean Visible) {
+		this.jLabel_GI.setVisible(Visible);
+	}
+
+	public void setjLabel_HI(boolean Visible) {
+		this.jLabel_HI.setVisible(Visible);
+	}
+
+	public void setjLabel_HJ(boolean Visible) {
+		this.jLabel_HJ.setVisible(Visible);
+	}
+
+	public void setjLabel_HL(boolean Visible) {
+		this.jLabel_HL.setVisible(Visible);
+	}
+
+	public void setjLabel_IM(boolean Visible) {
+		this.jLabel_IM.setVisible(Visible);
+	}
+
+	public void setjLabel_JK(boolean Visible) {
+		this.jLabel_JK.setVisible(Visible);
+	}
+
+	public void setjLabel_KN(boolean Visible) {
+		this.jLabel_KN.setVisible(Visible);
+	}
+
+	public void setjLabel_LK(boolean Visible) {
+		this.jLabel_LK.setVisible(Visible);
+	}
+
+	public void setjLabel_ML(boolean Visible) {
+		this.jLabel_ML.setVisible(Visible);
+	}
+
+	public void setjLabel_MO(boolean Visible) {
+		this.jLabel_MO.setVisible(Visible);
+	}
+
+	public void setjLabel_ON(boolean Visible) {
+		this.jLabel_ON.setVisible(Visible);
+	}
+
+
+
+	// Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
@@ -460,14 +547,16 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JLabel jLabel_AC;
+    private javax.swing.JLabel jLabel_AB;
     private javax.swing.JLabel jLabel_AG;
+    private javax.swing.JLabel jLabel_BC;
     private javax.swing.JLabel jLabel_BF;
     private javax.swing.JLabel jLabel_CD;
     private javax.swing.JLabel jLabel_CE;
     private javax.swing.JLabel jLabel_DJ;
-    private javax.swing.JLabel jLabel_EG;
+    private javax.swing.JLabel jLabel_EF;
     private javax.swing.JLabel jLabel_EH;
+    private javax.swing.JLabel jLabel_FG;
     private javax.swing.JLabel jLabel_GI;
     private javax.swing.JLabel jLabel_HI;
     private javax.swing.JLabel jLabel_HJ;
@@ -490,5 +579,6 @@ public class Interface extends javax.swing.JFrame {
     private java.awt.Label label2;
     private java.awt.Label label3;
     private java.awt.Label label4;
+    private String trajetFinal;
     // End of variables declaration//GEN-END:variables
 }
