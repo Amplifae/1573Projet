@@ -209,7 +209,7 @@ public class Interface extends javax.swing.JFrame {
         jPanel1.add(jLabel9);
         jLabel9.setBounds(1005, 112, 48, 48);
 
-        jButton1.setBackground(new java.awt.Color(0, 0, 0));
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-proche-de-moi-30.png"))); // NOI18N
         jButton1.setText("Démarrer");
@@ -219,7 +219,7 @@ public class Interface extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(94, 102, 131, 39);
+        jButton1.setBounds(94, 102, 140, 45);
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
 
