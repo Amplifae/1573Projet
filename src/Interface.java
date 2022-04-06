@@ -88,7 +88,7 @@ public class Interface extends javax.swing.JFrame {
         label1.setBounds(36, 12, 118, 28);
         label1.getAccessibleContext().setAccessibleName("Destination");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "L" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
@@ -104,7 +104,7 @@ public class Interface extends javax.swing.JFrame {
         jPanel1.add(label2);
         label2.setBounds(164, 12, 118, 28);
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "L" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O" }));
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox2ActionPerformed(evt);
@@ -129,13 +129,13 @@ public class Interface extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jTextField1);
-        jTextField1.setBounds(544, 63, 54, 26);
+        jTextField1.setBounds(544, 63, 70, 26);
 
         jTextField2.setEditable(false);
         jTextField2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextField2.setText("0.0 KM");
         jPanel1.add(jTextField2);
-        jTextField2.setBounds(544, 99, 54, 26);
+        jTextField2.setBounds(544, 99, 70, 26);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8-fiat-500-48.png"))); // NOI18N
         jPanel1.add(jLabel2);
@@ -325,12 +325,12 @@ public class Interface extends javax.swing.JFrame {
         jPanel1.add(jLabel_CE);
         jLabel_CE.setBounds(90, 420, 480, 20);
 
-        jLabel_HI.setBackground(new java.awt.Color(255, 0, 0));
+        jLabel_HI.setBackground(new java.awt.Color(0, 51, 204));
         jLabel_HI.setOpaque(true);
         jPanel1.add(jLabel_HI);
         jLabel_HI.setBounds(800, 430, 20, 430);
 
-        jLabel_HJ.setBackground(new java.awt.Color(255, 0, 0));
+        jLabel_HJ.setBackground(new java.awt.Color(0, 51, 204));
         jLabel_HJ.setOpaque(true);
         jPanel1.add(jLabel_HJ);
         jLabel_HJ.setBounds(800, 200, 20, 230);
@@ -387,7 +387,15 @@ public class Interface extends javax.swing.JFrame {
 	public void setjTextField1(double valeur) {
 		jTextField1.setText(String.valueOf(valeur) + " KM");
 	}
-
+	public void setjTextField2(double valeur) {
+		jTextField2.setText(String.valueOf(valeur) + " KM");
+	}
+	public void setjTextField3(String valeur) {
+		jTextField3.setText(valeur);
+	}
+	public void setjTextField4(String valeur) {
+		jTextField4.setText(valeur);
+	}
 	private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed

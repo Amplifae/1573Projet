@@ -4,16 +4,16 @@ import java.util.List;
 import java.util.PriorityQueue;
 
 public class Pathing {                                                  // Algorithme de Djikstra
-    public void findPath(Node nodeStr){
+    public void findPath(Lieu nodeStr){
         nodeStr.setDist(0);
-        PriorityQueue<Node> prioQ = new PriorityQueue<>();
+        PriorityQueue<Lieu> prioQ = new PriorityQueue<>();
         prioQ.add(nodeStr);
         nodeStr.setExplored(true);
 
         while (!prioQ.isEmpty()){
-            Node currentNode = prioQ.poll();
-            for (Edge edge : currentNode.getEdgeList()){
-                Node n = edge.getNodeEnd();
+            Lieu currentNode = prioQ.poll();
+            for (Route edge : currentNode.getEdgeList()){
+                Lieu n = edge.getNodeEnd();
                 if (!n.Explored()){
                     double dist0 = currentNode.getDist() + edge.getWeight();
                     if (dist0 < n.getDist()){
@@ -28,9 +28,9 @@ public class Pathing {                                                  // Algor
         }
     }
 
-    public List<Node> SmallPath (Node nodeEnd){
-        List<Node> path = new ArrayList<>();
-        for(Node n = nodeEnd; n != null; n = n.getPq()){
+    public List<Lieu> SmallPath (Lieu nodeEnd){
+        List<Lieu> path = new ArrayList<>();
+        for(Lieu n = nodeEnd; n != null; n = n.getPq()){
             path.add(n);
         }
         Collections.reverse(path);

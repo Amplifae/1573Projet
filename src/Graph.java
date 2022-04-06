@@ -9,6 +9,8 @@ public class Graph {
 
     // https://gyazo.com/539ad025df8a0a2dad5f697b122df346
 	
+	Interface int1 = new Interface();
+	
 	public static void AfficherTrajet(Interface n1, String[] allSegments) {
 		
 		 n1.setjLabel_AB(false);
@@ -236,13 +238,54 @@ public class Graph {
    	return resultat;
     }
     
-    public static double CalculerTemps(double km, double vitesse) {
+    public static String CalculerTemps(double km, double vitesse) {
     	
-    	double temps; 
+    	String retour = "";
     	
+    	double temps = km/vitesse;
     	
-    	return 2.0;
+    	double secondes = temps*3600;
+    	
+    	double ConvSec = secondes % 60;
+        double ConvMin = (secondes % 3600) / 60; 
+        double ConvHour = (secondes % (3600 * 24)) / 3600;
+        
+        // Gestion de l'affichage du temps
+         
+        //Cas des heures
+        if(ConvHour < 10) {
+        	retour = "0" + String.valueOf((int)ConvHour) + ":" ;
+        }
+        else {
+        	retour = String.valueOf((int)ConvHour) + ":" ;
+        }
+        
+        //Cas des minutes
+        if(ConvMin < 10) {
+        	retour += "0" + String.valueOf((int)ConvMin) + ":" ;
+        }
+        else {
+        	retour += String.valueOf((int)ConvMin) + ":" ;
+        }        
+ 
+        //Cas des secondes
+        if(ConvSec < 10) {
+        	retour += "0" + String.valueOf((int)ConvSec);
+        }
+        else {
+        	retour += String.valueOf((int)ConvSec);
+        } 
+            	
+        
+    	return retour;
     }
+    
+    
+    public static void GestionTrafic() {
+    	
+    	
+    }
+    
     
 	public static void CreerTrajet(Interface n1) {
 		
@@ -253,65 +296,66 @@ public class Graph {
 		String combo1 = n1.getCombo1Value(); //Valeur des entrées par l'utilisateur
 		String combo2 = n1.getCombo2Value();
 		
-        Node nA = new Node("A");            // Noeuds qui vont composer le graphique
-        Node nB = new Node("B");
-        Node nC = new Node("C");
-        Node nD = new Node("D");
-        Node nE = new Node("E");
-        Node nF = new Node("F");
-        Node nG = new Node("G");            // Noeuds qui vont composer le graphique
-        Node nH = new Node("H");
-        Node nI = new Node("I");
-        Node nJ = new Node("J");
-        Node nK = new Node("K");
-        Node nL = new Node("L");
-        Node nM = new Node("M");            // Noeuds qui vont composer le graphique
-        Node nN = new Node("N");
-        Node nO = new Node("O");
-        Node nP = new Node("P");
+        Lieu nA = new Lieu("A");            // Noeuds qui vont composer le graphique
+        Lieu nB = new Lieu("B");
+        Lieu nC = new Lieu("C");
+        Lieu nD = new Lieu("D");
+        Lieu nE = new Lieu("E");
+        Lieu nF = new Lieu("F");
+        Lieu nG = new Lieu("G");            // Noeuds qui vont composer le graphique
+        Lieu nH = new Lieu("H");
+        Lieu nI = new Lieu("I");
+        Lieu nJ = new Lieu("J");
+        Lieu nK = new Lieu("K");
+        Lieu nL = new Lieu("L");
+        Lieu nM = new Lieu("M");            // Noeuds qui vont composer le graphique
+        Lieu nN = new Lieu("N");
+        Lieu nO = new Lieu("O");
+        Lieu nP = new Lieu("P");
 
-        nA.addParent(new Edge(nA, nB, 5)); // On ajoute les chemins entre les noeuds
-        nA.addParent(new Edge(nA, nG, 10));
-        nB.addParent(new Edge(nB, nC, 5));
-        nB.addParent(new Edge(nB, nF, 10));
-        nB.addParent(new Edge(nB, nA, 5));
-        nC.addParent(new Edge(nC, nE, 10));
-        nC.addParent(new Edge(nC, nB, 5));
-        nC.addParent(new Edge(nC, nD, 5));
-        nD.addParent(new Edge(nD, nC, 5));
-        nD.addParent(new Edge(nD, nJ, 10));
-        nE.addParent(new Edge(nE, nC, 10));
-        nE.addParent(new Edge(nE, nH, 5));
-        nE.addParent(new Edge(nE, nF, 5));
-        nF.addParent(new Edge(nF, nE, 5));
-        nF.addParent(new Edge(nF, nB, 10));
-        nF.addParent(new Edge(nF, nG, 5));
-        nG.addParent(new Edge(nG, nF, 5));
-        nG.addParent(new Edge(nG, nA, 10));
-        nG.addParent(new Edge(nG, nI, 5));
-        nH.addParent(new Edge(nH, nE, 5));
-        nH.addParent(new Edge(nH, nJ, 5));
-        nH.addParent(new Edge(nH, nI, 10));
-        nH.addParent(new Edge(nH, nL, 5));
-        nI.addParent(new Edge(nI, nG, 5));
-        nI.addParent(new Edge(nI, nM, 5));
-        nI.addParent(new Edge(nI, nH, 10));
-        nJ.addParent(new Edge(nJ, nD, 10));
-        nJ.addParent(new Edge(nJ, nK, 5));
-        nJ.addParent(new Edge(nJ, nH, 5));
-        nK.addParent(new Edge(nK, nJ, 5));
-        nK.addParent(new Edge(nK, nL, 5));
-        nK.addParent(new Edge(nK, nN, 5));
-        nL.addParent(new Edge(nL, nK, 5));
-        nL.addParent(new Edge(nL, nM, 10));
-        nL.addParent(new Edge(nL, nH, 5));
-        nM.addParent(new Edge(nM, nL, 10));
-        nM.addParent(new Edge(nM, nI, 5));
-        nM.addParent(new Edge(nM, nO, 5));
-        nN.addParent(new Edge(nN, nK, 5));
-        nN.addParent(new Edge(nN, nO, 20));
-        nO.addParent(new Edge(nO, nM, 5));
-        nO.addParent(new Edge(nO, nN, 20));
+        nA.addParent(new Route(nA, nB, 5, false)); // On ajoute les chemins entre les noeuds
+        nA.addParent(new Route(nA, nG, 10, false));
+        nB.addParent(new Route(nB, nC, 5, false));
+        nB.addParent(new Route(nB, nF, 10, false));
+        nB.addParent(new Route(nB, nA, 5, false));
+        nC.addParent(new Route(nC, nE, 10, false));
+        nC.addParent(new Route(nC, nB, 5, false));
+        nC.addParent(new Route(nC, nD, 5, false));
+        nD.addParent(new Route(nD, nC, 5, false));
+        nD.addParent(new Route(nD, nJ, 15, false));
+        nE.addParent(new Route(nE, nC, 10, false));
+        nE.addParent(new Route(nE, nH, 5, false));
+        nE.addParent(new Route(nE, nF, 5, false));
+        nF.addParent(new Route(nF, nE, 5, false));
+        nF.addParent(new Route(nF, nB, 10, false));
+        nF.addParent(new Route(nF, nG, 5, false));
+        nG.addParent(new Route(nG, nF, 5, false));
+        nG.addParent(new Route(nG, nA, 10, false));
+        nG.addParent(new Route(nG, nI, 5, false));
+        nH.addParent(new Route(nH, nE, 5, false));
+        nH.addParent(new Route(nH, nJ, 5, false));
+        nH.addParent(new Route(nH, nI, 10, false));
+        nH.addParent(new Route(nH, nL, 5, false));
+        nI.addParent(new Route(nI, nG, 5, false));
+        nI.addParent(new Route(nI, nM, 5, false));
+        nI.addParent(new Route(nI, nH, 10, false));
+        nJ.addParent(new Route(nJ, nD, 10, false));
+        nJ.addParent(new Route(nJ, nK, 5, false));
+        nJ.addParent(new Route(nJ, nH, 5, false));
+        nK.addParent(new Route(nK, nJ, 5, false));
+        nK.addParent(new Route(nK, nL, 5, false));
+        nK.addParent(new Route(nK, nN, 5, false));
+        nL.addParent(new Route(nL, nK, 5, false));
+        nL.addParent(new Route(nL, nM, 10, false));
+        nL.addParent(new Route(nL, nH, 5, false));
+        nM.addParent(new Route(nM, nL, 10, false));
+        nM.addParent(new Route(nM, nI, 5, false));
+        nM.addParent(new Route(nM, nO, 5, false));
+        nN.addParent(new Route(nN, nK, 5, false));
+        nN.addParent(new Route(nN, nO, 20, false));
+        nO.addParent(new Route(nO, nM, 5, false));
+        nO.addParent(new Route(nO, nN, 20, false));
+    
         
         Pathing smollPath = new Pathing();
 		
@@ -432,10 +476,22 @@ public class Graph {
 	      
 	      String[] allSegments = resultat.split(",");
 	      
+	      //Affiche le trajet sur l'interface graphique
 	      AfficherTrajet(n1, allSegments);
+	      
+	      //Affiche la distance sur l'interface graphique
 	      n1.setjTextField1(distance);
+	      n1.setjTextField2(distance);
+	      
+	      //Calculer le temps nécessaire au trajet et afficher
+	      n1.setjTextField3(CalculerTemps(distance, 35.0));
+	      n1.setjTextField4(CalculerTemps(distance, 45.0));
 		
 }
+	
+	
+	
+	
 	
     public static void main(String[] args) {
 
