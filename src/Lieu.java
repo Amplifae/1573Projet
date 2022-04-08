@@ -1,16 +1,18 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Node implements Comparable<Node>{
+public class Lieu implements Comparable<Lieu>{
 	
 	private String ID;
+	
+	
 
-	private List<Edge> edgeList;
-	private Node pq;
+	private List<Route> edgeList;
+	private Lieu pq;
 	private double dist =Double.MAX_VALUE ;
 	private boolean explored;
 	
-	public Node(String ID) {
+	public Lieu(String ID) {
 		this.ID = ID;
 		this.edgeList = new ArrayList();
 	}
@@ -25,10 +27,10 @@ public class Node implements Comparable<Node>{
 		this.explored = explored;
 	}
 
-	public List<Edge> getEdgeList(){
+	public List<Route> getEdgeList(){
 		return edgeList;
 	}
-	public void setEdgeList(List<Edge> List){
+	public void setEdgeList(List<Route> List){
 		this.edgeList = List;
 	}
 	public double getDist(){
@@ -37,24 +39,25 @@ public class Node implements Comparable<Node>{
 	public void setDist(double dist){
 		this.dist = dist;
 	}
-	public Node getPq(){
+	public Lieu getPq(){
 		return pq;
 	}
-	public void setPq(Node pq){
+	public void setPq(Lieu pq){
 		this.pq = pq;
 	}
-	public void addParent(Edge edge){
+	public void addParent(Route edge){
 		this.edgeList.add(edge);
 	}
-
 	@Override
-	public int compareTo(Node o) {
+	public int compareTo(Lieu o) {
 		return Double.compare(this.dist, o.getDist());
 	}
 	@Override
 	public String toString() {
 		return this.ID;
 	}
+	
+	
 	/*
 	public void djikstraInit()
 	{
