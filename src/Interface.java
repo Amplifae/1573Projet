@@ -1,3 +1,5 @@
+import java.awt.Color;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -24,7 +26,6 @@ public class Interface extends javax.swing.JFrame {
     //@SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-    	trajetFinal = "";
         jPanel1 = new javax.swing.JPanel();
         label1 = new java.awt.Label();
         jComboBox1 = new javax.swing.JComboBox<>();
@@ -69,6 +70,7 @@ public class Interface extends javax.swing.JFrame {
         jLabel_HI = new javax.swing.JLabel();
         jLabel_HJ = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jCheckBox1 = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Application MAAS");
@@ -89,11 +91,6 @@ public class Interface extends javax.swing.JFrame {
         label1.getAccessibleContext().setAccessibleName("Destination");
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
-            }
-        });
         jPanel1.add(jComboBox1);
         jComboBox1.setBounds(78, 50, 37, 22);
 
@@ -105,11 +102,6 @@ public class Interface extends javax.swing.JFrame {
         label2.setBounds(164, 12, 118, 28);
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O" }));
-        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox2ActionPerformed(evt);
-            }
-        });
         jPanel1.add(jComboBox2);
         jComboBox2.setBounds(199, 50, 37, 22);
 
@@ -123,11 +115,6 @@ public class Interface extends javax.swing.JFrame {
         jTextField1.setEditable(false);
         jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jTextField1.setText("0.0 KM");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
         jPanel1.add(jTextField1);
         jTextField1.setBounds(544, 63, 70, 26);
 
@@ -334,6 +321,11 @@ public class Interface extends javax.swing.JFrame {
         jLabel_HJ.setOpaque(true);
         jPanel1.add(jLabel_HJ);
         jLabel_HJ.setBounds(800, 200, 20, 230);
+        
+        jCheckBox1.setBackground(new java.awt.Color(255, 255, 255));
+        jCheckBox1.setText("Activer le trafic");
+        jPanel1.add(jCheckBox1);
+        jCheckBox1.setBounds(970, 30, 120, 25);
 
         jLabel1.setBackground(new java.awt.Color(153, 153, 153));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
@@ -368,6 +360,10 @@ public class Interface extends javax.swing.JFrame {
         jLabel_ON.setVisible(false);
         
         
+        this.jLabel8.setVisible(false);
+        this.jLabel9.setVisible(false);
+        
+        
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -384,6 +380,26 @@ public class Interface extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
+    /**
+     * @Note Récupère la valeur du checkBox
+     * @author Équipe 8
+     * @return boolean 
+     */
+	public boolean getjCheckBox1() {
+		return jCheckBox1.isSelected();
+	}
+	
+	
+	
+	//#####################################################################################################################################
+	/**
+	 * 
+	 * @param valeur
+	 * @author Équipe 8
+	 * @Note Change la valeur des différents jTextField dans l'interface
+	 */
+
 	public void setjTextField1(double valeur) {
 		jTextField1.setText(String.valueOf(valeur) + " KM");
 	}
@@ -396,161 +412,401 @@ public class Interface extends javax.swing.JFrame {
 	public void setjTextField4(String valeur) {
 		jTextField4.setText(valeur);
 	}
-	private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-    
-    		
-    }//GEN-LAST:event_jComboBox1ActionPerformed
-
-    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox2ActionPerformed
-
+	
+	//#####################################################################################################################################
+	
+	/**
+	 * @Note Lorsque le bouton démarrer est appuyer on affiche le trajet
+	 * @param evt
+	 */
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     		Graph.CreerTrajet(this);
     }//GEN-LAST:event_jButton1ActionPerformed
     
-    
+   
+
     /**
-     * @param args the command line arguments
+     * @author Équipe 8
+     * @param Aucun
+     * @Note Fonction qui reset l'interface de l'application
      */
-    /*public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Interface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Interface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Interface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Interface.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        Create and display the form 
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Interface().setVisible(true);
-            }
-        });
-    }*/
     
+     public void resetTraficInterface() {
+    	 
+    	this.jTextField5.setText("Aucun trafic"); 
+    	this.jLabel8.setVisible(false);
+    	this.jLabel7.setVisible(true);
+ 		jLabel_AB.setBackground(Color.BLUE);
+ 		jLabel_AG.setBackground(Color.BLUE);
+ 		jLabel_BF.setBackground(Color.BLUE);
+ 		jLabel_BC.setBackground(Color.BLUE);
+ 		jLabel_CE.setBackground(Color.BLUE);
+ 		jLabel_CD.setBackground(Color.BLUE);
+ 		jLabel_DJ.setBackground(Color.BLUE);
+ 		jLabel_JK.setBackground(Color.BLUE);
+ 		jLabel_HJ.setBackground(Color.BLUE);
+ 		jLabel_EH.setBackground(Color.BLUE);
+ 		jLabel_EF.setBackground(Color.BLUE);
+ 		jLabel_FG.setBackground(Color.BLUE);
+ 		jLabel_GI.setBackground(Color.BLUE);
+ 		jLabel_IM.setBackground(Color.BLUE);
+ 		jLabel_HI.setBackground(Color.BLUE);
+ 		jLabel_HL.setBackground(Color.BLUE);
+ 		jLabel_LK.setBackground(Color.BLUE);
+ 		jLabel_ML.setBackground(Color.BLUE);
+ 		jLabel_MO.setBackground(Color.BLUE);
+ 		jLabel_ON.setBackground(Color.BLUE);
+ 		jLabel_KN.setBackground(Color.BLUE);
+     }
 
-    
-    
-     
-
-
-    public void setjComboBox2(javax.swing.JComboBox<String> jComboBox2) {
+   //#####################################################################################################################################
+   /*
+    * Section des fonctions qui controle les différents composants de l'interface graphique
+    * 
+    */
+   //#####################################################################################################################################
+     /**
+      * 
+      * @param valeur
+      */
+    public void setjTextField5(String valeur) {
+		this.jTextField5.setText("Trafic sur la route entre " + valeur);
+	}
+/**
+ * 
+ * @param visible
+ */
+	public void setVisiblejLabel7(boolean visible) {
+		this.jLabel7.setVisible(visible);
+	}
+	/**
+	 * 
+	 * @param visible
+	 */
+	public void setVisiblejLabel8(boolean visible) {
+		this.jLabel8.setVisible(visible);
+	}
+	/**
+	 * 
+	 * @param visible
+	 */
+	public void setVisiblejLabel9(boolean visible) {
+		this.jLabel9.setVisible(visible);
+	}
+	/**
+	 * 
+	 * @param jComboBox2
+	 */
+	public void setjComboBox2(javax.swing.JComboBox<String> jComboBox2) {
 		this.jComboBox2 = jComboBox2;
 	}
 
-
-
+	/**
+	 * 
+	 * @param Visible
+	 */
 	public void setjLabel_AB(boolean Visible) {
 		this.jLabel_AB.setVisible(Visible);
 	}
-
+	/**
+	 * 
+	 * @param Visible
+	 */
 	public void setjLabel_AG(boolean Visible) {
 		this.jLabel_AG.setVisible(Visible);
 	}
-
+	/**
+	 * 
+	 * @param Visible
+	 */
 	public void setjLabel_BC(boolean Visible) {
 		this.jLabel_BC.setVisible(Visible);
 	}
-
+	/**
+	 * 
+	 * @param Visible
+	 */
 	public void setjLabel_BF(boolean Visible) {
 		this.jLabel_BF.setVisible(Visible);
 	}
-	
+	/**
+	 * 
+	 * @param Visible
+	 */
 	public void setjLabel_EF(boolean Visible) {
 		this.jLabel_EF.setVisible(Visible);
 	}
-	
+	/**
+	 * 
+	 * @param Visible
+	 */
 	public void setjLabel_FG(boolean Visible) {
 		this.jLabel_FG.setVisible(Visible);
 	}	
-
+	/**
+	 * 
+	 * @param Visible
+	 */
 	public void setjLabel_CD(boolean Visible) {
 		this.jLabel_CD.setVisible(Visible);
 	}
-
+	/**
+	 * 
+	 * @param Visible
+	 */
 	public void setjLabel_CE(boolean Visible) {
 		this.jLabel_CE.setVisible(Visible);
 	}
-
+	/**
+	 * 
+	 * @param Visible
+	 */
 	public void setjLabel_DJ(boolean Visible) {
 		this.jLabel_DJ.setVisible(Visible);
 	}
-
+	/**
+	 * 
+	 * @param Visible
+	 */
 	public void setjLabel_EH(boolean Visible) {
 		this.jLabel_EH.setVisible(Visible);
 	}
-
+	/**
+	 * 
+	 * @param Visible
+	 */
 	public void setjLabel_GI(boolean Visible) {
 		this.jLabel_GI.setVisible(Visible);
 	}
-
+	/**
+	 * 
+	 * @param Visible
+	 */
 	public void setjLabel_HI(boolean Visible) {
 		this.jLabel_HI.setVisible(Visible);
 	}
-
+	/**
+	 * 
+	 * @param Visible
+	 */
 	public void setjLabel_HJ(boolean Visible) {
 		this.jLabel_HJ.setVisible(Visible);
 	}
-
+	/**
+	 * 
+	 * @param Visible
+	 */
 	public void setjLabel_HL(boolean Visible) {
 		this.jLabel_HL.setVisible(Visible);
 	}
-
+	/**
+	 * 
+	 * @param Visible
+	 */
 	public void setjLabel_IM(boolean Visible) {
 		this.jLabel_IM.setVisible(Visible);
 	}
-
+	/**
+	 * 
+	 * @param Visible
+	 */
 	public void setjLabel_JK(boolean Visible) {
 		this.jLabel_JK.setVisible(Visible);
 	}
-
+	/**
+	 * 
+	 * @param Visible
+	 */
 	public void setjLabel_KN(boolean Visible) {
 		this.jLabel_KN.setVisible(Visible);
 	}
-
+	/**
+	 * 
+	 * @param Visible
+	 */
 	public void setjLabel_LK(boolean Visible) {
 		this.jLabel_LK.setVisible(Visible);
 	}
-
+	/**
+	 * 
+	 * @param Visible
+	 */
 	public void setjLabel_ML(boolean Visible) {
 		this.jLabel_ML.setVisible(Visible);
 	}
-
+	/**
+	 * 
+	 * @param Visible
+	 */
 	public void setjLabel_MO(boolean Visible) {
 		this.jLabel_MO.setVisible(Visible);
 	}
-
+	/**
+	 * 
+	 * @param Visible
+	 */
 	public void setjLabel_ON(boolean Visible) {
 		this.jLabel_ON.setVisible(Visible);
 	}
-	
+	/**
+	 * 
+	 * @param Color
+	 */
+	public void setColorjLabel_AB(java.awt.Color Color) {
+		this.jLabel_AB.setBackground(Color);
+	}
+	/**
+	 * 
+	 * @param Color
+	 */
+	public void setColorjLabel_AG(java.awt.Color Color) {
+		this.jLabel_AG.setBackground(Color);
+	}
+	/**
+	 * 
+	 * @param Color
+	 */
+	public void setColorjLabel_BC(java.awt.Color Color) {
+		this.jLabel_BC.setBackground(Color);
+	}
+	/**
+	 * 
+	 * @param Color
+	 */
+	public void setColorjLabel_BF(java.awt.Color Color) {
+		this.jLabel_BF.setBackground(Color);
+	}
+	/**
+	 * 
+	 * @param Color
+	 */
+	public void setColorjLabel_EF(java.awt.Color Color) {
+		this.jLabel_EF.setBackground(Color);
+	}
+	/**
+	 * 
+	 * @param Color
+	 */
+	public void setColorjLabel_FG(java.awt.Color Color) {
+		this.jLabel_FG.setBackground(Color);
+	}
+	/**
+	 * 
+	 * @param Color
+	 */
+	public void setColorjLabel_CD(java.awt.Color Color) {
+		this.jLabel_CD.setBackground(Color);
+	}
+	/**
+	 * 
+	 * @param Color
+	 */
+	public void setColorjLabel_CE(java.awt.Color Color) {
+		this.jLabel_CE.setBackground(Color);
+	}
+	/**
+	 * 
+	 * @param Color
+	 */
+	public void setColorjLabel_DJ(java.awt.Color Color) {
+		this.jLabel_DJ.setBackground(Color);
+	}
+	/**
+	 * 
+	 * @param Color
+	 */
+	public void setColorjLabel_EH(java.awt.Color Color) {
+		this.jLabel_EH.setBackground(Color);
+	}
+	/**
+	 * 
+	 * @param Color
+	 */
+	public void setColorjLabel_GI(java.awt.Color Color) {
+		this.jLabel_GI.setBackground(Color);
+	}
+	/**
+	 * 
+	 * @param Color
+	 */
+	public void setColorjLabel_HI(java.awt.Color Color) {
+		this.jLabel_HI.setBackground(Color);
+	}
+	/**
+	 * 
+	 * @param Color
+	 */
+	public void setColorjLabel_HJ(java.awt.Color Color) {
+		this.jLabel_HJ.setBackground(Color);
+	}
+	/**
+	 * 
+	 * @param Color
+	 */
+	public void setColorjLabel_HL(java.awt.Color Color) {
+		this.jLabel_HL.setBackground(Color);
+	}
+	/**
+	 * 
+	 * @param Color
+	 */
+	public void setColorjLabel_IM(java.awt.Color Color) {
+		this.jLabel_IM.setBackground(Color);
+	}
+	/**
+	 * @param Color
+	 */
+	public void setColorjLabel_JK(java.awt.Color Color) {
+		this.jLabel_JK.setBackground(Color);
+	}
+	/**
+	 * 
+	 * @param Color
+	 */
+	public void setColorjLabel_KN(java.awt.Color Color) {
+		this.jLabel_KN.setBackground(Color);
+	}
+	/**
+	 * 
+	 * @param Color
+	 */
+	public void setColorjLabel_LK(java.awt.Color Color) {
+		this.jLabel_LK.setBackground(Color);
+	}
+	/**
+	 * 
+	 * @param Color
+	 */
+	public void setColorjLabel_ML(java.awt.Color Color) {
+		this.jLabel_ML.setBackground(Color);
+	}
+	/**
+	 * 
+	 * @param Color
+	 */
+	public void setColorjLabel_MO(java.awt.Color Color) {
+		this.jLabel_MO.setBackground(Color);
+	}
+	/**
+	 * 
+	 * @param Color
+	 */
+	public void setColorjLabel_ON(java.awt.Color Color) {
+		this.jLabel_ON.setBackground(Color);
+	}
+	/**
+	 * 
+	 * @return valeur
+	 */
 	public String getCombo1Value() {
 		String valeur = "n" + jComboBox1.getSelectedItem().toString(); 
 		return valeur;
 	}
+	/**
+	 * 
+	 * @return valeur
+	 */
 	public String getCombo2Value() {
 		String valeur = "n" + jComboBox2.getSelectedItem().toString(); 
 		return valeur;
@@ -602,6 +858,6 @@ public class Interface extends javax.swing.JFrame {
     private java.awt.Label label2;
     private java.awt.Label label3;
     private java.awt.Label label4;
-    private String trajetFinal;
+    private javax.swing.JCheckBox jCheckBox1;
     // End of variables declaration//GEN-END:variables
 }
